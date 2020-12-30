@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home-header {
+  background-image: url(./images/home-background.png),
+    linear-gradient(237deg, #46b3ff 0%, #0752fe 100%) !important;
+  background-size: contain;
+  background-position: bottom center;
+  height: 600px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.header-title h1 {
+  padding: 3rem;
+}

@@ -1,27 +1,35 @@
-import React from "react"
-import {Nav, Navbar} from 'react-bootstrap'
+import React, { useState } from "react"
+import { MenuItems } from './MenuItems'
+import { Button } from './Button'
+import './Header.css'
 
 
+const Header = () => {
 
-const Header = () => (
-<>
-    <div style={{paddingTop: '10px'}}>
-        <Navbar bg="light" expand="lg">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav>
-                <Nav.Link href="/">Inicio</Nav.Link>
-                <Nav.Link href="#">Nosotros</Nav.Link>
-                <Nav.Link href="#">Registro</Nav.Link>
-                <Nav.Link href="#">Tickets</Nav.Link>
-                <Nav.Link href="#">Blog</Nav.Link>
-                <Nav.Link href="#">Contacto</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    </div>
+    const [isClicked, setIsClicked] = useState(false);
 
-</>
-)
+        
+    return(
+            <div className="header-container" >
+                <nav className="NavBarItems">
+                    <h1 className="navBar-logo">React Recipe <i className="fab fa-react"></i></h1>
+                    <div className="menu-icon" onClick={() => setIsClicked(!isClicked)}>
+                        <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    </div>
+                    <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>
+                        {MenuItems.map((item, index) => {
+                            return(
+                            <li key={index}>
+                                <a className={item.cName} href={item.url}>
+                                    {item.title}
+                                </a>
+                            </li>
+                            )
+                        })}
+                    </ul>
+                    <Button>Sign Up</Button>
+                </nav>
+            </div>
+)}
 
 export default Header
