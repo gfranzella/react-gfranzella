@@ -7,24 +7,45 @@
 
 .home-header {
   background-image: url(./images/home-background.png),
+    url(./images/home-background2.jpg),
     linear-gradient(237deg, #46b3ff 0%, #0752fe 100%) !important;
-  background-size: contain;
-  background-position: bottom center;
+  background-size: contain, cover;
+  background-position: bottom center, top right;
   height: 600px;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: 1.2rem;
 }
 
 .header-title {
   color: #fff;
   font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-img {
   text-align: center;
 }
 
 .header-title h1 {
-  padding: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-text {
+  font-size: 1.2rem;
+  max-width: 70%;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: 800;
+}
+
+.fa-laptop-code {
+  font-size: 2.5rem;
+  padding-top: 1rem;
 }
