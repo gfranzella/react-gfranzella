@@ -1,0 +1,30 @@
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+  align-items: center;
+}
+
+.todo-input {
+  min-height: 30px;
+  font-size: 1.2rem;
+  margin: 20px;
+  min-width: 250px;
+  padding: 2px;
+}
+
+.save-button {
+  color: white;
+  font-weight: 800;
+  background-color: steelblue;
+  border-radius: 15px;
+  padding: 10px;
+  width: 130px;
+  font-size: 1.2rem;
+}
+
+.todo-app ol li {
+  font-size: 1.2rem;
+  margin: 10px;
+}

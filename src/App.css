@@ -5,6 +5,22 @@
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 64px;
+}
+
+h3,
+h4 {
+  margin-bottom: 0;
+  padding: 30px 0;
+}
+
+.page-title {
+  padding-bottom: 30px;
+}
+
 .home-header {
   background-image: url(./images/home-background.png),
     url(./images/home-background2.jpg),
@@ -48,4 +64,96 @@
 .fa-laptop-code {
   font-size: 2.5rem;
   padding-top: 1rem;
+}
+
+/* About me section */
+
+.about-me {
+  height: 600px;
+  padding-top: 20px;
+  margin: 20px 20px;
+  padding: 30px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.about-profile {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-profile img {
+  width: 20%;
+  padding: 2.5rem;
+  border-radius: 50%;
+}
+
+.about-profile p {
+  width: 50%;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  text-align: justify;
+  box-shadow: 0 5px 20px 0 rgb(2 0 12 / 44%);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.api-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.api-section div {
+  padding: 20px;
+}
+
+/* Article section */
+
+.article-list-item {
+  text-decoration: none;
+  color: black;
+  padding: 16px 0 0 0;
+}
+
+.article-list-item p {
+  padding-bottom: 32px;
+  border-bottom: 2px solid black;
 }

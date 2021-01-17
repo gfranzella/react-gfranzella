@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  padding-right: 20px;
 }
 
 .navBar-logo {
@@ -18,6 +19,15 @@
   margin-left: 20px;
   cursor: pointer;
   min-width: 235px;
+  display: flex;
+}
+
+.navTitle-link {
+  text-decoration: none;
+}
+
+.btn-signUp {
+  margin-right: 30px;
 }
 
 .fa-react {

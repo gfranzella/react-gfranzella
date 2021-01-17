@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { MenuItems } from './MenuItems'
 import { Button } from './Button'
+import { Link } from 'react-router-dom'
+import LogoImg from '../images/gfranzella_logo.png'
 import './Header.css'
 
 
@@ -12,7 +14,15 @@ const Header = () => {
     return(
             <div className="header-container" >
                 <nav className="NavBarItems">
-                    <h1 className="navBar-logo">React Recipe <i className="fab fa-react"></i></h1>
+                    <Link className="navTitle-link" to="/">
+                        <div className="navBar-logo">
+                            <h1 >
+                                Gianfranco Franzella
+                            </h1>
+                            <img src={LogoImg} alt="GF" style={{width:'20%', marginLeft:'20px'}} />
+                        </div>
+                        
+                    </Link>
                     <div className="menu-icon" onClick={() => setIsClicked(!isClicked)}>
                         <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>
@@ -20,14 +30,14 @@ const Header = () => {
                         {MenuItems.map((item, index) => {
                             return(
                             <li key={index}>
-                                <a className={item.cName} href={item.url}>
+                                <Link className={item.cName} to={item.url}>
                                     {item.title}
-                                </a>
+                                </Link>
                             </li>
                             )
                         })}
                     </ul>
-                    <Button>Sign Up</Button>
+                    <Button buttonCustomStyle={{width: '135px'}}>Sign Up</Button>
                 </nav>
             </div>
 )}
