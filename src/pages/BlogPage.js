@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function BlogPage(){
     
     return(
-        <div>
+        <div className="blog-section">
             <h1 className="page-title">Blog Articles</h1>
             {articleContent.map((article,index) =>(
                 <Link className="article-list-item" key={index} to={`/article/${article.name}`}>

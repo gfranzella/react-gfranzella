@@ -19,7 +19,7 @@ const Header = () => {
                             <h1 >
                                 Gianfranco Franzella
                             </h1>
-                            <img src={LogoImg} alt="GF" style={{width:'20%', marginLeft:'20px'}} />
+                            <img src={LogoImg} alt="GF" />
                         </div>
                         
                     </Link>

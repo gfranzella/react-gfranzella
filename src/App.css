@@ -5,12 +5,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-main {
-  max-width: 700px;
-  margin: auto;
-  padding-top: 64px;
-}
-
 h3,
 h4 {
   margin-bottom: 0;
@@ -147,6 +141,12 @@ h4 {
 
 /* Article section */
 
+.blog-section {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 64px;
+}
+
 .article-list-item {
   text-decoration: none;
   color: black;
@@ -156,4 +156,16 @@ h4 {
 .article-list-item p {
   padding-bottom: 32px;
   border-bottom: 2px solid black;
+}
+
+/* mobile */
+
+@media screen and (max-width: 960px) {
+  .blog-section {
+    margin: auto 20px;
+  }
+
+  .article-list-item p {
+    font-size: 0.8rem;
+  }
 }
